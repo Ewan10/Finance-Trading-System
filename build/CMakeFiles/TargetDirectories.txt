@@ -1,3 +1,0 @@
-C:/dev/TradingSystem/build/CMakeFiles/TradingSystem.dir
-C:/dev/TradingSystem/build/CMakeFiles/edit_cache.dir
-C:/dev/TradingSystem/build/CMakeFiles/rebuild_cache.dir
