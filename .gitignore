@@ -12,46 +12,46 @@ engine/*.cpp
 target/
 
 # Node / Angular
-Client/node_modules/
-Client/dist/
-Client/.angular/
+client/node_modules/
+client/dist/
+client/.angular/
 
-Client/dist
-Client/tmp
+client/dist
+client/tmp
 /out-tsc
 /bazel-out
 
 # Node
-/node_modules
-Client/npm-debug.log
-Client/yarn-error.log
+client/node_modules
+client/npm-debug.log
+client/yarn-error.log
 
 # IDEs and editors
 .idea/
 .project
-Client/.classpath
+client/.classpath
 .c9/
-Client/*.launch
-Client/.settings/
+client/*.launch
+client/.settings/
 *.sublime-workspace
 
 # Visual Studio Code
-Client/.vscode/*
-Client/!.vscode/settings.json
-Client/!.vscode/tasks.json
-Client/!.vscode/launch.json
-Client/!.vscode/extensions.json
-Client/.history/*
+client/.vscode/*
+client/!.vscode/settings.json
+client/!.vscode/tasks.json
+client/!.vscode/launch.json
+client/!.vscode/extensions.json
+client/.history/*
 
 # Miscellaneous
-Client//.angular/cache
+client/.angular/cache
 .sass-cache/
 /connect.lock
-Client//coverage
-Client//libpeerconnection.log
-Client/testem.log
+client/coverage
+client/libpeerconnection.log
+client/testem.log
 /typings
 
 # System files
-Client/.DS_Store
-Client/Thumbs.db
+client/.DS_Store
+client/Thumbs.db
