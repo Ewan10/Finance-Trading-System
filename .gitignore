@@ -1,0 +1,16 @@
+
+.vscode/
+
+# C++ / CMake
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+engine/*.exe
+target/
+
+# Node / Angular
+node_modules/
+dist/
+.angular/
