@@ -8,9 +8,50 @@ CMakeCache.txt
 cmake_install.cmake
 Makefile
 engine/*.exe
+engine/*.cpp
 target/
 
 # Node / Angular
-node_modules/
-dist/
-.angular/
+Client/node_modules/
+Client/dist/
+Client/.angular/
+
+Client/dist
+Client/tmp
+/out-tsc
+/bazel-out
+
+# Node
+/node_modules
+Client/npm-debug.log
+Client/yarn-error.log
+
+# IDEs and editors
+.idea/
+.project
+Client/.classpath
+.c9/
+Client/*.launch
+Client/.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+Client/.vscode/*
+Client/!.vscode/settings.json
+Client/!.vscode/tasks.json
+Client/!.vscode/launch.json
+Client/!.vscode/extensions.json
+Client/.history/*
+
+# Miscellaneous
+Client//.angular/cache
+.sass-cache/
+/connect.lock
+Client//coverage
+Client//libpeerconnection.log
+Client/testem.log
+/typings
+
+# System files
+Client/.DS_Store
+Client/Thumbs.db
