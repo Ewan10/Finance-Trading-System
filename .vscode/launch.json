@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "TradingSystem Debug",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/engine/build/TradingSystem.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:/dev/mingw64/bin/gdb.exe",
+    }
+  ]
+}

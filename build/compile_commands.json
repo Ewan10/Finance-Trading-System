@@ -1,0 +1,38 @@
+[
+{
+  "directory": "C:/dev/TradingSystem/build",
+  "command": "C:\\dev\\mingw64\\bin\\c++.exe -IC:/dev/TradingSystem/engine/include -IC:/dev/boost_1_86_0 -g -std=c++23 -o CMakeFiles\\TradingSystem.dir\\src\\HttpServer.cpp.obj -c C:\\dev\\TradingSystem\\engine\\src\\HttpServer.cpp",
+  "file": "C:\\dev\\TradingSystem\\engine\\src\\HttpServer.cpp",
+  "output": "CMakeFiles\\TradingSystem.dir\\src\\HttpServer.cpp.obj"
+},
+{
+  "directory": "C:/dev/TradingSystem/build",
+  "command": "C:\\dev\\mingw64\\bin\\c++.exe -IC:/dev/TradingSystem/engine/include -IC:/dev/boost_1_86_0 -g -std=c++23 -o CMakeFiles\\TradingSystem.dir\\src\\core\\Order.cpp.obj -c C:\\dev\\TradingSystem\\engine\\src\\core\\Order.cpp",
+  "file": "C:\\dev\\TradingSystem\\engine\\src\\core\\Order.cpp",
+  "output": "CMakeFiles\\TradingSystem.dir\\src\\core\\Order.cpp.obj"
+},
+{
+  "directory": "C:/dev/TradingSystem/build",
+  "command": "C:\\dev\\mingw64\\bin\\c++.exe -IC:/dev/TradingSystem/engine/include -IC:/dev/boost_1_86_0 -g -std=c++23 -o CMakeFiles\\TradingSystem.dir\\src\\core\\limitOrderBook\\LimitOrderBook.cpp.obj -c C:\\dev\\TradingSystem\\engine\\src\\core\\limitOrderBook\\LimitOrderBook.cpp",
+  "file": "C:\\dev\\TradingSystem\\engine\\src\\core\\limitOrderBook\\LimitOrderBook.cpp",
+  "output": "CMakeFiles\\TradingSystem.dir\\src\\core\\limitOrderBook\\LimitOrderBook.cpp.obj"
+},
+{
+  "directory": "C:/dev/TradingSystem/build",
+  "command": "C:\\dev\\mingw64\\bin\\c++.exe -IC:/dev/TradingSystem/engine/include -IC:/dev/boost_1_86_0 -g -std=c++23 -o CMakeFiles\\TradingSystem.dir\\src\\core\\matching-engine\\MatchingEngine.cpp.obj -c C:\\dev\\TradingSystem\\engine\\src\\core\\matching-engine\\MatchingEngine.cpp",
+  "file": "C:\\dev\\TradingSystem\\engine\\src\\core\\matching-engine\\MatchingEngine.cpp",
+  "output": "CMakeFiles\\TradingSystem.dir\\src\\core\\matching-engine\\MatchingEngine.cpp.obj"
+},
+{
+  "directory": "C:/dev/TradingSystem/build",
+  "command": "C:\\dev\\mingw64\\bin\\c++.exe -IC:/dev/TradingSystem/engine/include -IC:/dev/boost_1_86_0 -g -std=c++23 -o CMakeFiles\\TradingSystem.dir\\src\\handlers\\OrderHandler.cpp.obj -c C:\\dev\\TradingSystem\\engine\\src\\handlers\\OrderHandler.cpp",
+  "file": "C:\\dev\\TradingSystem\\engine\\src\\handlers\\OrderHandler.cpp",
+  "output": "CMakeFiles\\TradingSystem.dir\\src\\handlers\\OrderHandler.cpp.obj"
+},
+{
+  "directory": "C:/dev/TradingSystem/build",
+  "command": "C:\\dev\\mingw64\\bin\\c++.exe -IC:/dev/TradingSystem/engine/include -IC:/dev/boost_1_86_0 -g -std=c++23 -o CMakeFiles\\TradingSystem.dir\\src\\main.cpp.obj -c C:\\dev\\TradingSystem\\engine\\src\\main.cpp",
+  "file": "C:\\dev\\TradingSystem\\engine\\src\\main.cpp",
+  "output": "CMakeFiles\\TradingSystem.dir\\src\\main.cpp.obj"
+}
+]

@@ -1,0 +1,9 @@
+{
+  "cmake.generator": "Ninja",
+  "cmake.sourceDirectory": "engine",
+  "cmake.buildDirectory": "engine/build",
+  "cmake.configureSettings": {
+    "CMAKE_C_COMPILER": "gcc",
+    "CMAKE_CXX_COMPILER": "g++"
+  }
+}
