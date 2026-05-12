@@ -5,14 +5,7 @@
   "projects": {
     "client": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "path": "src/features"
-        },
-        "@schematics/angular:interface": {
-          "path": "src/shared/models"
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
