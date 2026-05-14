@@ -7,6 +7,7 @@
 #include <nlohmann/json.hpp>
 #include "core/types/Order.h"
 #include "handlers/OrderHandler.h"
+#include "utils/OrderIdGenerator.h"
 
 namespace beast = boost::beast;
 namespace http = beast::http;
@@ -65,10 +66,10 @@ namespace Exchange
 
                         std::string target = std::string(req.target());
 
-                        if (req.method() == http::verb::post && target == "/orders")
+                        if (req.method() == http::verb::post && target == "/api/orders")
                         {
                             auto json = nlohmann::json::parse(req.body());
-                            uint64_t orderId = json["orderId"];
+                            uint64_t orderId = OrderIdGenerator::next();
                             uint64_t clientId = json["clientId"];
                             uint64_t price = json["price"];
                             uint64_t quantity = json["quantity"];
@@ -76,32 +77,43 @@ namespace Exchange
 
                             Order::Side side = (sideStr == "BUY") ? Order::Side::BUY : Order::Side::SELL;
 
-                            auto timestamp = std::chrono::steady_clock::now();
+                            auto timestamp = std::chrono::system_clock::now();
 
                             Order order(orderId, clientId, timestamp, price, quantity, side);
+                            res.result(http::status::ok);
                             res.body() = handler_.handleAddOrder(order);
+                            res.prepare_payload();  
+                            std::cout << "Received order: " << orderId << std::endl;
                         }
-                        else if (req.method() == http::verb::delete_ && target.rfind("/orders/", 0) == 0)
+                        else if (req.method() == http::verb::delete_ && target.rfind("/api/orders/", 0) == 0)
                         {
-                            std::string idStr = target.substr(std::string("/orders/").size());
+                            std::string idStr = target.substr(std::string("/api/orders/").size());
                             uint64_t orderId = std::stoull(idStr);
+                            res.result(http::status::ok);
                             res.body() = handler_.handleCancelOrder(orderId);
+                            res.prepare_payload();  
                         }
-                        else if (req.method() == http::verb::put && target.rfind("/orders/", 0) == 0)
+                        else if (req.method() == http::verb::put && target.rfind("/api/orders/", 0) == 0)
                         {
-                            std::string idStr = target.substr(std::string("/orders/").size());
+                            std::string idStr = target.substr(std::string("/api/orders/").size());
                             uint64_t orderId = std::stoull(idStr);
 
                             auto json = nlohmann::json::parse(req.body());
+                            res.result(http::status::ok);
                             res.body() = handler_.handleModifyOrder(orderId, json);
+                            res.prepare_payload();  
+
                         }
-                        else if (req.method() == http::verb::get && target == "/orderbook")
+                        else if (req.method() == http::verb::get && target == "/api/orderbook")
                         {
+                            res.result(http::status::ok);
                             res.body() = handler_.handleGetBook();
+                            res.prepare_payload();  
                         }
-                        else if (req.method() == http::verb::get && target == "/trades")
+                        else if (req.method() == http::verb::get && target == "/api/trades")
                         {
                             res.body() = handler_.handleGetTrades();
+                            res.prepare_payload();  
                         }
                         else
                         {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { OrderEntry } from './order-entry/order-entry';
 import { OrdersTable } from './orders-table/orders-table';
 
@@ -13,5 +13,5 @@ import { OrdersTable } from './orders-table/orders-table';
   styleUrl: './orders.css',
 })
 export class Orders {
-
+  
 }

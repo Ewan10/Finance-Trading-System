@@ -1,12 +1,14 @@
 package com.ewan.tradingsystem.api.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ewan.tradingsystem.api.dtos.OrderBookResponse;
 import com.ewan.tradingsystem.api.services.OrderService;
 
 @RestController
+@RequestMapping("/api")
 public class MarketController {
 
     private final OrderService service;

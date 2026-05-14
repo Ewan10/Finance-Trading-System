@@ -1,7 +1,10 @@
  .table-container {
-    display: flex;
-    justify-self: center;
-     border: 0.1rem solid var(--color-border);
+     display: flex;
+     justify-self: center;
+ }
+
+ .table {
+     border-collapse: collapse;
  }
 
  th,
@@ -26,18 +29,20 @@
      color: var(--color-text-light);
  }
 
+ .table-body .table-row:nth-child(even) {
+     background-color: var(--color-tertiary);
+ }
+
+ .table-body .table-row:nth-child(odd) {
+     background-color: #fff;
+ }
+
  /*
-.table {
-    border: 0.1rem solid var(--color-border);
-    }
 
 .table-body {
 
 }
     
-    .table-row {
-        border: 0.1rem solid var(--color-border);
-    }
 
 
 

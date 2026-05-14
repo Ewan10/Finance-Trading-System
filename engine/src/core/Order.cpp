@@ -1,7 +1,7 @@
 #include "core/types/Order.h"
 
 namespace Exchange {
-    Order::Order(uint64_t orderId, uint64_t clientId, std::chrono::steady_clock::time_point timestamp,
+    Order::Order(uint64_t orderId, uint64_t clientId, std::chrono::system_clock::time_point timestamp,
             uint64_t price, uint64_t quantity, Side side)
             : orderId(orderId), clientId(clientId), timestamp(timestamp), price(price),
             quantity(quantity), remainingQuantity(quantity), side(side), status(Status::NEW) {}
@@ -24,6 +24,10 @@ namespace Exchange {
 
         bool Order::isFilled() const {
             return remainingQuantity == 0;
+        }
+
+        std::chrono::system_clock::time_point Order::getTimestamp() {
+            return timestamp;
         }
 
         void Order::cancel() {

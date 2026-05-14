@@ -7,24 +7,31 @@ import static org.springframework.http.HttpMethod.PUT;
 import org.springframework.http.HttpEntity;
 
 import static org.springframework.http.HttpMethod.DELETE;
-
 import com.ewan.tradingsystem.api.dtos.OrderBookResponse;
 import com.ewan.tradingsystem.api.dtos.OrderDto;
+import com.ewan.tradingsystem.api.dtos.OrderResponse;
 import com.ewan.tradingsystem.api.dtos.StatusResponse;
 
 @Component
 public class EngineClient {
 
     private final RestTemplate restTemplate;
-    private static final String URL = "http://localhost:8081";
+    private static final String URL = "http://localhost:8081/api";
 
     public EngineClient(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
 
-    public StatusResponse submitOrder(OrderDto orderDto) {
-        return restTemplate.postForObject(
-                URL + "/orders", orderDto, StatusResponse.class);
+    public OrderResponse  submitOrder(OrderDto orderDto) {
+        try {
+            OrderResponse response = restTemplate.postForObject(
+                    URL + "/orders", orderDto, OrderResponse.class);
+
+            return response;
+        } catch (Exception e) {
+            throw e;
+        }
+
     }
 
     public StatusResponse cancelOrder(long id) {

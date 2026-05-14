@@ -3,7 +3,7 @@
         <caption class="caption">Active Orders</caption>
         <thead>
             <tr class="table-row">
-                <th class="order-id" scope="col">Order ID</th>
+                <th class="order-id" scope="col">Id</th>
                 <th class="side" scope="col">Side</th>
                 <th class="quantity" scope="col">Quantity</th>
                 <th class="price" scope="col">Price</th>
@@ -12,21 +12,27 @@
             </tr>
         </thead>
         <tbody class="table-body">
-            <tr class="table-row">
-                <td class="order-id">1</td>
-                <td class="side">BUY</td>
-                <td class="quantity" >100</td>
-                <td class="price" >50.0</td>
-                <td class="status">Pending</td>
-                <td class="time">
-                    <time datetime="2023-10-01T10:00:00">
-                        10:00:00
-                    </time>
-                </td>
-            </tr>
+            @if (orders().length === 0) {
             <tr class="empty-row">
                 <td colspan="6">No active orders</td>
             </tr>
+            } 
+            @else {
+                @for (order of orders(); track $index) {
+                    <tr class="table-row">
+                        <td class="order-id">{{ order.orderId }}</td>
+                        <td class="side">{{ order.side }}</td>
+                        <td class="quantity">{{ order.quantity }}</td>
+                        <td class="price">{{ order.price | price | number:'1.2-2' }}</td>
+                        <td class="status">{{ order.status }}</td>
+                        <td class="time">
+                            <time [attr.datetime]=" order.timestamp | date:'yyyy-MM-ddTHH:mm'">
+                                {{ order.timestamp | date:'HH:mm' }}
+                            </time>
+                        </td>
+                    </tr>
+                }
+            }
         </tbody>
     </table>
 </div>

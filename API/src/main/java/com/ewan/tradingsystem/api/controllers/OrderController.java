@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ewan.tradingsystem.api.dtos.OrderDto;
+import com.ewan.tradingsystem.api.dtos.OrderResponse;
 import com.ewan.tradingsystem.api.dtos.StatusResponse;
 import com.ewan.tradingsystem.api.services.OrderService;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,7 +25,7 @@ public class OrderController {
     }
 
     @PostMapping
-    public StatusResponse submit(@RequestBody OrderDto orderDto)
+    public OrderResponse submit(@RequestBody OrderDto orderDto)
     {
         return orderService.submit(orderDto);
     }

@@ -1,12 +1,21 @@
 #include "handlers/OrderHandler.h"
 #include <nlohmann/json.hpp>
+#include "utils/time_utils.hpp"
 
 namespace Exchange
 {
     std::string OrderHandler::handleAddOrder(Order &order)
     {
         engine.submitOrder(order);
-        return makeStatus("added");
+        nlohmann::json res;
+        res["orderId"] = order.getOrderId();
+        res["clientId"] = order.getClientId();
+        res["side"] = Order::sideToString(order.getSide());
+        res["quantity"] = order.getQuantity();
+        res["price"] = order.getPrice();
+        res["timestamp"] = utils::toISO8601(order.getTimestamp());
+        res["status"] = Order::statusToString(order.status);
+        return res.dump();
     }
 
     std::string OrderHandler::handleCancelOrder(uint64_t orderId)

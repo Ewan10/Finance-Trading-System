@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 import com.ewan.tradingsystem.api.client.EngineClient;
 import com.ewan.tradingsystem.api.dtos.OrderBookResponse;
 import com.ewan.tradingsystem.api.dtos.OrderDto;
+import com.ewan.tradingsystem.api.dtos.OrderResponse;
 import com.ewan.tradingsystem.api.dtos.StatusResponse;
 
 @Service
@@ -14,7 +15,7 @@ public class OrderService {
         this.engineClient = engineClient;
     }
 
-    public StatusResponse submit(OrderDto orderDto) {
+    public OrderResponse submit(OrderDto orderDto) {
         return engineClient.submitOrder(orderDto);
     }
 
