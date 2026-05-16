@@ -90,6 +90,7 @@ void Exchange::LimitOrderBook::match(Order &order, Book &book, PriceCondition pr
             uint64_t tradePrice = restingOrder.getPrice();
 
             trades.emplace_back(
+                Trade::generateTradeId(),
                 (order.getSide() == Order::Side::BUY ? order.getOrderId() : restingOrder.getOrderId()),
                 (order.getSide() == Order::Side::SELL ? order.getOrderId() : restingOrder.getOrderId()),
                 tradePrice,

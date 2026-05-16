@@ -5,10 +5,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ewan.tradingsystem.api.dtos.OrderBookResponse;
+import com.ewan.tradingsystem.api.dtos.TradesResponse;
 import com.ewan.tradingsystem.api.services.OrderService;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("api")
 public class MarketController {
 
     private final OrderService service;
@@ -23,7 +24,7 @@ public class MarketController {
     }
 
     @GetMapping("/trades")
-    public OrderBookResponse getTrades() {
+    public TradesResponse getTrades() {
         return service.getTrades();
     }
 }

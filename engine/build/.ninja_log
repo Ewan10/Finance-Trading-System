@@ -1,15 +1,12 @@
 # ninja log v6
-38	7416	8004422199024815	CMakeFiles/TradingSystem.dir/src/core/Order.cpp.obj	35a870083f16870d
-52	11695	8004422199165864	CMakeFiles/TradingSystem.dir/src/core/matching-engine/MatchingEngine.cpp.obj	6e2066e5c8841865
-58	17043	8004422199218000	CMakeFiles/TradingSystem.dir/src/handlers/OrderHandler.cpp.obj	9886deb13e1eaaa5
-43	17199	8004422199090365	CMakeFiles/TradingSystem.dir/src/core/limitOrderBook/LimitOrderBook.cpp.obj	4d6b025ca0a36277
-63	20170	8004422199273175	CMakeFiles/TradingSystem.dir/src/main.cpp.obj	5086e169a5fd64c
-31	31519	8004422198950553	CMakeFiles/TradingSystem.dir/src/HttpServer.cpp.obj	fc88fd6ef1b5cdd3
-31544	32162	8004422514075406	TradingSystem.exe	bf0b7dd8bb47e9a5
-132	4597	8004504455702011	CMakeFiles/TradingSystem.dir/src/core/Order.cpp.obj	35a870083f16870d
-145	9332	8004504455836663	CMakeFiles/TradingSystem.dir/src/core/matching-engine/MatchingEngine.cpp.obj	6e2066e5c8841865
-137	13920	8004504455769439	CMakeFiles/TradingSystem.dir/src/core/limitOrderBook/LimitOrderBook.cpp.obj	4d6b025ca0a36277
-150	13970	8004504455881686	CMakeFiles/TradingSystem.dir/src/handlers/OrderHandler.cpp.obj	9886deb13e1eaaa5
-161	17070	8004504456002852	CMakeFiles/TradingSystem.dir/src/main.cpp.obj	5086e169a5fd64c
-125	28163	8004504455626239	CMakeFiles/TradingSystem.dir/src/HttpServer.cpp.obj	fc88fd6ef1b5cdd3
-28163	29032	8004504736016455	TradingSystem.exe	bf0b7dd8bb47e9a5
+17	4247	8006576517340232	CMakeFiles/TradingSystem.dir/src/core/Order.cpp.obj	35a870083f16870d
+31	7818	8006576517479272	CMakeFiles/TradingSystem.dir/src/core/matching-engine/MatchingEngine.cpp.obj	6e2066e5c8841865
+37	11944	8006576517568390	CMakeFiles/TradingSystem.dir/src/handlers/OrderHandler.cpp.obj	9886deb13e1eaaa5
+47	14179	8006576517668497	CMakeFiles/TradingSystem.dir/src/main.cpp.obj	5086e169a5fd64c
+13	22878	8006576517295914	CMakeFiles/TradingSystem.dir/src/HttpServer.cpp.obj	fc88fd6ef1b5cdd3
+39	7340	8006580614946378	CMakeFiles/TradingSystem.dir/src/core/matching-engine/MatchingEngine.cpp.obj	6e2066e5c8841865
+35	11700	8006580614908008	CMakeFiles/TradingSystem.dir/src/core/limitOrderBook/LimitOrderBook.cpp.obj	4d6b025ca0a36277
+43	11707	8006580614986325	CMakeFiles/TradingSystem.dir/src/handlers/OrderHandler.cpp.obj	9886deb13e1eaaa5
+47	13409	8006580615048021	CMakeFiles/TradingSystem.dir/src/main.cpp.obj	5086e169a5fd64c
+30	22795	8006580614863021	CMakeFiles/TradingSystem.dir/src/HttpServer.cpp.obj	fc88fd6ef1b5cdd3
+22795	23364	8006580842499958	TradingSystem.exe	bf0b7dd8bb47e9a5

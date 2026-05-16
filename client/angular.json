@@ -7,18 +7,18 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "path": "src/features"
+          "path": "src/app"
         },
         "@schematics/angular:interface": {
-          "path": "src/shared/models",
+          "path": "src/app",
           "type": "model"
         },
         "@schematics/angular:service": {
-          "path": "src/core/services",
+          "path": "src/app/core/services",
           "type": "service"
         },
          "@schematics/angular:pipe": {
-          "path": "src/shared/pipes"
+          "path": "src/app/shared/pipes"
         }
       },
       "root": "",

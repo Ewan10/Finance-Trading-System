@@ -1,0 +1,46 @@
+<div class="table-container">
+    <table class="table">
+        <caption class="caption">{{ caption() }}</caption>
+        <thead>
+            <tr class="table-row">
+                @for(col of columns(); track col.key) {
+                <th>{{ col.label }}</th>
+                }
+            </tr>
+        </thead>
+        <tbody class="table-body">
+            @if (data().length === 0) {
+                <tr class="empty-row">
+                    <td colspan="6">No {{ noEntriesMsg() }}</td>
+                </tr>
+            }
+            @else {
+                @for(row of data(); track row[trackByKey()]) {
+                    <tr class="table-row">
+                        @for(col of columns(); track col.key) {
+                            <td> @switch (col.type) {
+                                @case ('time') {
+                                    <time [attr.datetime]=" row[col.key] | date:'yyyy-MM-ddTHH:mm'">
+                                        {{ row[col.key] | date:'HH:mm' }}
+                                    </time>
+                                }
+                                    @default {
+                                        @switch (col.pipe) {
+                                            @case ('number') {
+                                                {{ row[col.key] | price | number: col.format }}
+                                            }
+
+                                            @default {
+                                                {{ row[col.key] }}
+                                            }
+                                        }
+                                    }
+                                }
+                            </td>
+                        }
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

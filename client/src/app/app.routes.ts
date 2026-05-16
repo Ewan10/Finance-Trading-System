@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { MainLayout } from '../features/main-layout/main-layout';
-import { Orders } from '../features/orders/orders';
+import { MainLayout } from './features/main-layout/main-layout';
+import { Orders } from './features/orders/orders';
 
 export const routes: Routes = [
      {

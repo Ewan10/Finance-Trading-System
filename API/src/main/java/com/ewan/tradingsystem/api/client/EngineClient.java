@@ -11,6 +11,7 @@ import com.ewan.tradingsystem.api.dtos.OrderBookResponse;
 import com.ewan.tradingsystem.api.dtos.OrderDto;
 import com.ewan.tradingsystem.api.dtos.OrderResponse;
 import com.ewan.tradingsystem.api.dtos.StatusResponse;
+import com.ewan.tradingsystem.api.dtos.TradesResponse;
 
 @Component
 public class EngineClient {
@@ -56,9 +57,9 @@ public class EngineClient {
                 OrderBookResponse.class);
     }
 
-    public OrderBookResponse getTrades() {
+    public TradesResponse getTrades() {
         return restTemplate.getForObject(
                 URL + "/trades",
-                OrderBookResponse.class);
+                TradesResponse.class);
     }
 }

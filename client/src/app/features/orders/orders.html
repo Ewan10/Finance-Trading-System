@@ -1,0 +1,9 @@
+<div class="orders-layout">
+    <div class="order-entry">
+        <app-order-entry />
+    </div>
+    <div class="orders-table">
+        <app-table [columns]="orderColumns" [data]="orders()" [trackByKey]="'orderId'"
+        [caption]="'Active Orders'" [noEntriesMsg]="'Active Orders'" />
+    </div>
+</div>

@@ -6,6 +6,7 @@ import com.ewan.tradingsystem.api.dtos.OrderBookResponse;
 import com.ewan.tradingsystem.api.dtos.OrderDto;
 import com.ewan.tradingsystem.api.dtos.OrderResponse;
 import com.ewan.tradingsystem.api.dtos.StatusResponse;
+import com.ewan.tradingsystem.api.dtos.TradesResponse;
 
 @Service
 public class OrderService {
@@ -31,7 +32,7 @@ public class OrderService {
         return engineClient.getOrderBook();
     }
 
-    public OrderBookResponse getTrades() {
+    public TradesResponse getTrades() {
         return engineClient.getTrades();
     }
 }
