@@ -14,7 +14,7 @@
           "type": "model"
         },
         "@schematics/angular:service": {
-          "path": "src/app/core/services",
+          "path": "src/app",
           "type": "service"
         },
          "@schematics/angular:pipe": {

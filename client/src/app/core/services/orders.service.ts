@@ -15,7 +15,7 @@ export class OrdersService {
   addOrder = (order: Order) => this._orders.update(list => [order, ...list]);
 
   submitOrder(order: any) {
-    return this.http.post<Order>(`${this.apiUrl}api/orders`, order);
+    return this.http.post<Order>(`${this.apiUrl}/orders`, order);
   }
 
 }

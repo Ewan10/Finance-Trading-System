@@ -29,10 +29,8 @@ export class OrderEntry {
     this.orderService.submitOrder(payload).subscribe({
       next: (response) => {
         this.orderService.addOrder(response);
-        console.log('Order submitted successfully:', response);
       },
       error: (error) => {
-        console.error('Error submitting order:', error);
       }
     });
   }
