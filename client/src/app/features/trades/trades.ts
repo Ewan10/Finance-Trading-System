@@ -26,9 +26,9 @@ export class Trades implements OnInit {
   trades = this.tradeService.trades;
 
   tradesColumns: TableColumn[] = [
-    { key: 'tradeId', label: 'Id' },
-    { key: 'buyOrderId', label: 'Buy Order Id' },
-    { key: 'sellOrderId', label: 'Sell Order Id' },
+    { key: 'tradeId', label: 'Trade Id' },
+    { key: 'buyOrderId', label: 'Buy Id' },
+    { key: 'sellOrderId', label: 'Sell Id' },
     { key: 'quantity', label: 'Quantity', },
     { key: 'price', label: 'Price', pipe: 'number', format: '1.2-2' },
     { key: 'timestamp', label: 'Time', type: 'time' },

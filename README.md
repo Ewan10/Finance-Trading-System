@@ -8,6 +8,8 @@ Components of crucial functionality of the engine will be the limit order book, 
 
 ![Screenshots](Screenshots/Orders.png)
 
+![Screenshots](Screenshots/Trades.png)
+
 ## Instructions of use
 
 ## Credits
